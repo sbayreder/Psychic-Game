@@ -3,11 +3,12 @@ h1 {
 }
 
 h3 {
-  color: blue;
+  color: slateblue;
+  font-weight: bolder;
 }
 
 h4 {
-  color: green;
+  color:black;
 }
 
 body{
