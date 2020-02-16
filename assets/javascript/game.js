@@ -33,13 +33,17 @@ if(letters.indexOf(playerGuess)>-1){
         lost ++;
         usedLtr=[];
     }
+//display content in DOM
 
-    document.getElementById("yourGuess").innerHTML = "Used Letters : " + usedLtr;
+    document.getElementById("yourGuess").innerHTML = "Your Guesses : " + usedLtr;
+    document.getElementById("guessLeft").innerHTML = "Guesses Left :" + attempts;
+    document.getElementById("loss").innerHTML = "Losses :" + lost;
+    document.getElementById("win").innerHTML = "Wins :" + won;
 }}
 
 
 
 
 
-//displaying content on HTML
+
  
