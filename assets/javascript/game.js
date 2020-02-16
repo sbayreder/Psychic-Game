@@ -12,7 +12,7 @@ document.onkeyup=function(event){
     var playerGuess=event.key;
     var psychicGuess=letters[Math.floor(Math.random()* letters.length)];
     console.log(psychicGuess)
-}
+ 
 
 
 //if guess is correct
@@ -22,23 +22,24 @@ if(letters.indexOf(playerGuess)>-1){
         attempts=10;
         usedLtr=[];
     }
+    //if guess is incorrect
     if (playerGuess!=psychicGuess){
         attempts--;
         usedLtr.push(playerGuess)
     }
-}
+    //when you lose
+    if (attempts===0){
+        attempts=10;
+        lost ++;
+        usedLtr=[];
+    }
+
+    document.getElementById("yourGuess").innerHTML = "Used Letters : " + usedLtr;
+}}
 
 
 
-//correct guess
-
-
-//incorrect guess
-
-
-
-//when out of attempts
 
 
 //displaying content on HTML
-//onkeyup= document.getElementById("yourGuess").innerHTML = [usedLtr]
+ 
